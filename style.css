@@ -1,0 +1,21 @@
+button{
+    width:60px;
+    border-radius:5px;
+}
+.container{
+    border: 1px solid black;
+    padding:5px;
+    max-width:610px;
+}
+
+.numbers{
+    margin-left:100px;
+}
+
+.display{
+    width:600px;
+    background-color:red;
+    padding:50px;
+    border-radius:5px;
+
+}
