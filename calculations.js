@@ -49,3 +49,33 @@ function removeNumbers(){
 
 let clear = document.querySelector("#clear");
 clear.addEventListener("click" , removeNumbers)
+
+
+//Function to update display when number is clicked 
+
+function updateDisplay(event){
+    const display = document.getElementById('calculatorDisplay');
+    const clickedNumber = event.target.getAttribute('data-number');
+
+
+    //Replace when displays 0 , otherwise append the number
+    if (display.innerText === '0') {
+        display.innerText = clickedNumber;
+    } else{
+        display.innerText += clickedNumber;
+    }
+
+}
+
+//Attaching event listener to number buttons
+
+const buttons = document.querySelectorAll('.button[data-number');
+buttons.forEach(button => {
+    button.addEventListener('click' , updateDisplay)
+});
+
+//Function to add the sum together 
+
+let currentInput = '0';
+let previousInput = ' ';
+let operator = ' ';
